@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct AttractionView: View {
+    var city: City
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            NavigationStack {
+                VStack {
+                    ForEach (city.attractions) { attraction in
+                        NavigationLink {
+                            DetailView(attraction: attraction)
+                        } label: {
+                            Text(attraction.name)
+                        }
+
+                    }
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    AttractionView()
+    AttractionView(city: City(name: "London",
+                              summary: "London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.",
+                              imageName: "london",
+                              attractions: [
+                                  Attraction(name: "Buckingham Palace",
+                                             summary: "Buckingham Palace is a London royal residence and the administrative headquarters of the monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality.",
+                                             longDescription: """
+                                             Buckingham Palace is a London royal residence and the administrative headquarters of the monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality.
+                                            """,
+                                             imageName: "buckingham", latLong: "51.50148418749087, -0.1410746109020975"),
+                              ]))
 }
