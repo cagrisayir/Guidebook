@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct CityView: View {
+    @State var cities: [City] = [City]()
+    var dataService = DataService()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                ForEach(cities) { city in
+                    Text(city.name)
+                }
+            }
+            .padding().onAppear {
+                cities = dataService.getData()
+            }
         }
-        .padding()
     }
 }
 
