@@ -18,7 +18,7 @@ struct DetailView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 300)
             
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 VStack(alignment: .leading, spacing: 20) {
                     Text(attraction.name)
                         .font(.title)
@@ -43,6 +43,7 @@ struct DetailView: View {
                 }
                 .padding(.horizontal)
             }
+            .padding(.bottom, 30)
         }.ignoresSafeArea()
     }
 }
