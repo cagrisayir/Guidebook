@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06063E8F2B1B596F009B3657 /* CityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06063E8E2B1B596F009B3657 /* CityCard.swift */; };
+		06063E912B1B5D6F009B3657 /* AttractionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06063E902B1B5D6F009B3657 /* AttractionRow.swift */; };
 		06501A8E2B19DA5F00657FC8 /* GuidebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501A8D2B19DA5F00657FC8 /* GuidebookApp.swift */; };
 		06501A902B19DA5F00657FC8 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501A8F2B19DA5F00657FC8 /* CityView.swift */; };
 		06501A922B19DA6100657FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06501A912B19DA6100657FC8 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		06063E8E2B1B596F009B3657 /* CityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCard.swift; sourceTree = "<group>"; };
+		06063E902B1B5D6F009B3657 /* AttractionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionRow.swift; sourceTree = "<group>"; };
 		06501A8A2B19DA5F00657FC8 /* Guidebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06501A8D2B19DA5F00657FC8 /* GuidebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidebookApp.swift; sourceTree = "<group>"; };
 		06501A8F2B19DA5F00657FC8 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				06501AA12B19DB5000657FC8 /* City.swift */,
 				06501AA32B19DBA500657FC8 /* Attraction.swift */,
 				06063E8E2B1B596F009B3657 /* CityCard.swift */,
+				06063E902B1B5D6F009B3657 /* AttractionRow.swift */,
 			);
 			path = Guidebook;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				06501A902B19DA5F00657FC8 /* CityView.swift in Sources */,
 				06501A9E2B19DAC400657FC8 /* DetailView.swift in Sources */,
+				06063E912B1B5D6F009B3657 /* AttractionRow.swift in Sources */,
 				06501AA22B19DB5000657FC8 /* City.swift in Sources */,
 				06501AA42B19DBA500657FC8 /* Attraction.swift in Sources */,
 				06063E8F2B1B596F009B3657 /* CityCard.swift in Sources */,
