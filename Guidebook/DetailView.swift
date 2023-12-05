@@ -26,25 +26,41 @@ struct DetailView: View {
                     
                     Text(attraction.longDescription)
                     Spacer()
-                    
-                    HStack {
-                        Spacer()
-                        Button("Get Direction") {
-                            
+                    if let url = URL(string: "maps://?q=\(cleanName(name: attraction.name))&sll=\(cleanCoords(coords: attraction.latLong))") {
+                        if UIApplication.shared.canOpenURL(url) {
+                            HStack {
+                                Spacer()
+                                Button{
+                                    UIApplication.shared.open(url)
+                                    
+                                } label: {
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .foregroundColor(.blue)
+                                            .frame(height: 40)
+                                        Text("Get Directions")
+                                            .foregroundColor(.white)
+                                    }
+                                }
+                                Spacer()
+                            }
                         }
-                        .padding(.horizontal, 100)
-                        .padding(.vertical, 10)
-                        .buttonBorderShape(.roundedRectangle(radius: 50))
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        Spacer()
                     }
+                    
                     
                 }
                 .padding(.horizontal)
             }
             .padding(.bottom, 30)
         }.ignoresSafeArea()
+    }
+    
+    func cleanName(name: String) -> String {
+        return name.replacingOccurrences(of: " ", with: "+")
+    }
+    
+    func cleanCoords(coords: String) -> String {
+        return coords.replacingOccurrences(of: " ", with: "")
     }
 }
 
