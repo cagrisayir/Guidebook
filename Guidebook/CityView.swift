@@ -28,7 +28,8 @@ struct CityView: View {
             }
             .ignoresSafeArea()
             .onAppear {
-                cities = dataService.getData()
+//                cities = dataService.getData()
+                cities = dataService.getFileData()
             }
         }
     }
